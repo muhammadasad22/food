@@ -3,6 +3,8 @@ import React from "react";
 import Headers from "../../components/header";
 import TopicHeader from "../../components/TopicHeader";
 import CustomInput from "../../components/CustomInput";
+import styles from "./styles";
+import CustomButton from "../../components/buttons/CustomButton";
 
 const SignIn = () => {
 
@@ -32,18 +34,10 @@ const SignIn = () => {
         value={email}
       />
       </View>
-     
+      <CustomButton/>
     </View>
   );
 };
 
 export default SignIn;
 
-const styles = StyleSheet.create({
-   cont: {
-     marginTop: 35,
-   },
-   cont1: {
-     marginTop: 10
-   }
-});
