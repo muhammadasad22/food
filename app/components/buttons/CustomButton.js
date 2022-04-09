@@ -1,28 +1,59 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, StyleSheet, Pressable } from "react-native";
 import React from "react";
 
-const CustomButton = () => {
+const CustomButton = ({
+  onPress,
+  text,
+  type = "PRIMARY",
+  bgColor,
+  fgColor,
+}) => {
   return (
-    <View style={styles.cont}>
-      <Text style={styles.BtnText}>SIGN IN</Text>
-    </View>
+    <Pressable
+      onPress={onPress}
+      style={[
+        styles.container,
+        styles[`container_${type}`],
+        bgColor ? { backgroundColor: bgColor } : {},
+      ]}
+    >
+      <Text
+        style={[
+          styles.text,
+          styles[`text_${type}`],
+          fgColor ? { color: fgColor } : {},
+        ]}
+      >
+        {text}
+      </Text>
+    </Pressable>
   );
 };
 
-export default CustomButton;
-
 const styles = StyleSheet.create({
-  cont: {
-    height: 50,
+  container: {
     width: "90%",
-    borderRadius: 10,
-    backgroundColor: '#22A45D',
+    padding: 15,
+    marginVertical: 5,
+    alignItems: "center",
+    borderRadius: 5,
     marginLeft: 15,
   },
-  BtnText: {
-    color: '#fff',
-    fontSize: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
+
+  container_PRIMARY: {
+    backgroundColor: "#3871F3",
+  },
+
+  container_TERTIARY: {},
+  text: {
+    fontWeight: "bold",
+    color: "white",
+    fontSize: 16,
+  },
+
+  text_TERTIARY: {
+    color: "gray",
+  },
 });
+
+export default CustomButton;
