@@ -10,6 +10,7 @@ import CustomButton from "../../components/buttons/CustomButton";
 const SignIn = () => {
 
   const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
   
   const onSignInPressed = () => {
     console.log("Sign in pressed");
@@ -43,8 +44,8 @@ const SignIn = () => {
         placeholder={'Password'}
         keyboardType={'default'}
         secureTextEntry={true}
-        onChange={setEmail}
-        value={email}
+        onChange={setPassword}
+        value={password}
       />
       </View>
  
