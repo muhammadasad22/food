@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   textCont: {
-    marginLeft: 120,
+    marginHorizontal: 60,
   },
   headerText: {
       fontSize: 20,
