@@ -24,7 +24,11 @@ const SignIn = () => {
       <Headers
         headerText={'Sign In'}
       />
-      <TopicHeader/>
+      <TopicHeader
+        h1={'Welcome to'}
+        h2={'Enter your Phone number or Email \nfor sign in, Or '}
+        LinkText={'Create new account'}
+      />
       <View style={styles.cont}>
       <CustomInput
         placeholder={'Phone number or Email'}
@@ -54,7 +58,7 @@ const SignIn = () => {
       
 
       <CustomButton 
-      text="Sign In" 
+      text="SIGN IN" 
       onPress={onSignInPressed} 
       bgColor="#22A45D"
       fgColor="#fff"
@@ -66,14 +70,14 @@ const SignIn = () => {
      
 
       <CustomButton
-        text="Connect with Facebook"
+        text="CONNECT WITH FACEBOOK"
         onPress={onSignInFacebook}
         bgColor="#395998"
         fgColor="#fff"
       />
       
       <CustomButton
-        text="Connect with Google"
+        text="CONNECT WITH GOOGLE"
         onPress={onSignInFacebook}
         bgColor="#4285F4"
         fgColor="#fff"
