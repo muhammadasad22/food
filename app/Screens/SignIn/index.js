@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet,  Pressable } from "react-native";
 import React from "react";
 import Headers from "../../components/header";
 import TopicHeader from "../../components/TopicHeader";
 import CustomInput from "../../components/CustomInput";
 import styles from "./styles";
 import CustomButton from "../../components/buttons/CustomButton";
+
 
 const SignIn = () => {
 
@@ -42,15 +43,29 @@ const SignIn = () => {
         value={email}
       />
       </View>
+ 
+     <View style={{marginVertical: 15}}>
+     <Pressable>
+        <Text style={{color: '#868686', fontSize: 16, textAlign: 'center'}}>
+          Forgot Password?
+        </Text>
+      </Pressable>
+     </View>
+      
+
       <CustomButton 
       text="Sign In" 
       onPress={onSignInPressed} 
       bgColor="#22A45D"
       fgColor="#fff"
       />
+       
+       <View style={{marginVertical: 15}}>
+       <Text style={{color: '#868686', fontSize: 20, textAlign: 'center'}}>Or</Text>
+       </View>
+     
 
-
-        <CustomButton
+      <CustomButton
         text="Connect with Facebook"
         onPress={onSignInFacebook}
         bgColor="#395998"
