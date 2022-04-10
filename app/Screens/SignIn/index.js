@@ -46,7 +46,7 @@ const SignIn = () => {
  
      <View style={{marginVertical: 15}}>
      <Pressable>
-        <Text style={{color: '#868686', fontSize: 16, textAlign: 'center'}}>
+        <Text style={{color: '#868686', fontSize: 16, textAlign: 'center', fontWeight: '700'}}>
           Forgot Password?
         </Text>
       </Pressable>
