@@ -5,7 +5,6 @@ import TopicHeader from "../../components/TopicHeader";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/buttons/CustomButton";
 import styles from "./styles";
-import { fontSize } from "@mui/system";
 
 const SignUp = () => {
  
